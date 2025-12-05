@@ -38,7 +38,7 @@ shopifypractice
 
 ----------------------------------------------------------
 
-# Urgency Block:
+# 1. Urgency Block:
 {% if product.inventory_quantity < 5 %}
   <div class="urgency-block">
     <p>Hurry! Only {{ product.inventory_quantity }} left in stock!</p>
@@ -48,7 +48,7 @@ shopifypractice
 # product.inventory_quantity kiểm tra số lượng sản phẩm còn lại trong kho.
 # if condition sẽ hiển thị block urgency khi số lượng sản phẩm còn ít hơn 5.
 -------------------------------------------------------------
-# Combo Suggestion:
+# 2. Combo Suggestion:
 {% if product.tags contains 'combo' %}
   <div class="combo-suggestion">
     <h3>Customers who bought this also bought:</h3>
@@ -69,7 +69,7 @@ shopifypractice
 # if condition dùng để chỉ hiển thị sản phẩm liên quan có tag 'combo'.
 
 -------------------------------------------
-# “Frequently Bought Together” Block:
+# 3. “Frequently Bought Together” Block:
 <div class="frequently-bought-together">
   <h3>Frequently Bought Together:</h3>
   <ul>
@@ -86,7 +86,7 @@ shopifypractice
 # Hiển thị các sản phẩm liên quan với giá của chúng.
 
 --------------------------------------------------------
-# “Why Customers Love It” Carousel
+# 4. “Why Customers Love It” Carousel
 <div class="why-customers-love-carousel">
   <h3>Why Customers Love It:</h3>
   <div class="carousel">
@@ -102,7 +102,7 @@ shopifypractice
 # for loop duyệt qua metafields.reviews để hiển thị nội dung đánh giá.
 # Các đánh giá được lấy từ product.metafields.
 -------------------------------------------------------------
-# Benefit Icons Auto-Render:
+# 5. Benefit Icons Auto-Render:
 <div class="benefit-icons">
   {% for tag in product.tags %}
     {% if tag == 'eco-friendly' %}
